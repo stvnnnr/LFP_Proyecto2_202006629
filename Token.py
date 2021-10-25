@@ -36,32 +36,32 @@ class Token():
 
     def getTipo(self):
         if self.tipo == self.palabraReservada:
-            return 'palabraReservada'
+            return 'Palabra Reservada'
         elif self.tipo == self.signoIgual:
-            return 'signoIgual'
+            return 'Signo Igual'
         elif self.tipo == self.cadena:
-            return "cadena"
+            return "Cadena de Texto"
         elif self.tipo == self.puntoComa:
-            return "puntoComa"
+            return "Punto Y Coma"
         elif self.tipo == self.numero:
-            return "numero"
+            return "Número"
         elif self.tipo == self.llaveIz:
-            return "llaveIz"
+            return "Llave Izquierda"
         elif self.tipo == self.llaveD:
-            return "llaveD"
+            return "Llave Derecha"
         elif self.tipo == self.corcheteIz:
-            return "corcheteIz"
+            return "Corchete Izquierdo"
         elif self.tipo == self.corcheteD:
-            return "corcheteD"
+            return "Corchete Derecho"
         elif self.tipo == self.parentesisIz:
-            return "parentesisIz"
+            return "Parentesis Izquierdo"
         elif self.tipo == self.parentesisD:
-            return "parentesisD"
+            return "Parentesis Derecho"
         elif self.tipo == self.coma:
-            return "coma"
+            return "Coma"
         elif self.tipo == self.coment:
-            return "coment"
+            return "Comentario"
         elif self.tipo == self.multiComent:
-            return "multiComent"
+            return "Comentario Multilinea"
         elif self.tipo == self.error:
-            return "error"
+            return "Error"
