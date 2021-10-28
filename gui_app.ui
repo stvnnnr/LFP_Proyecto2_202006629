@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>890</width>
     <height>600</height>
    </rect>
   </property>
@@ -101,9 +101,9 @@
    <widget class="QLabel" name="consola">
     <property name="geometry">
      <rect>
-      <x>410</x>
+      <x>390</x>
       <y>100</y>
-      <width>241</width>
+      <width>361</width>
       <height>471</height>
      </rect>
     </property>
@@ -120,7 +120,7 @@
    <widget class="QComboBox" name="comboRepos">
     <property name="geometry">
      <rect>
-      <x>670</x>
+      <x>760</x>
       <y>120</y>
       <width>121</width>
       <height>31</height>
@@ -150,7 +150,7 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>680</x>
+      <x>760</x>
       <y>90</y>
       <width>121</width>
       <height>31</height>
@@ -166,7 +166,7 @@
    <widget class="QPushButton" name="botonGenerar">
     <property name="geometry">
      <rect>
-      <x>670</x>
+      <x>760</x>
       <y>160</y>
       <width>121</width>
       <height>31</height>

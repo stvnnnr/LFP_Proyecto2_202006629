@@ -72,23 +72,43 @@ class principal(QMainWindow):
         multiComent = herramientaDos.obtenerMultilinea(archivo)
         listaRegistros = []
         listaRegistros = herramientaDos.obtenerListaRegisto(archivo)
-        #--------------------------------------------------------
-        self.consola.setText(claves+"\n"+registros+"\n"+imprimir+"\n"+comentario+"\n"+conteo+"\n"+multiComent+"\n"+imprimirln)
+        promedioStock = herramientaDos.promedioStock(archivo)
+        promedioCompra = herramientaDos.promedioCompra(archivo)
+        promedioVenta = herramientaDos.promedioVenta(archivo)
+        contar = herramientaDos.contarsi(archivo)
+        maxi = herramientaDos.obtenerMaximo(archivo)
+        mini = herramientaDos.obtenerMinimo(archivo)
 
-        for li in range(len(listaRegistros)):
-            print(listaRegistros[li])
-
+        variableImpri = (comentario+multiComent+imprimir+imprimirln)
+        if "conteo();" in archivo:
+            variableImpri = (variableImpri +conteo)
+        if 'promedio("stock");' in archivo:
+            variableImpri = (variableImpri +promedioStock)
+        if 'promedio("precio_compra");' in archivo:
+            variableImpri = (variableImpri +promedioCompra)
+        if 'promedio("precio_venta");' in archivo:
+            variableImpri = (variableImpri +promedioVenta)
+        if "contarsi" in archivo:
+            variableImpri = (variableImpri +contar)
+        if 'datos();' in archivo:
+            variableImpri = (variableImpri + claves + registros)
+        if "max(" in archivo:
+            variableImpri = (variableImpri +"\n"+maxi)
+        if "min(" in archivo:
+            variableImpri = (variableImpri +"\n"+mini)
         
+        #-------------------------------------------------
+        if 'exportarReporte' in archivo:
+            repo = herramientaDos.generarRepo(archivo)
+            
+        self.consola.setText(variableImpri)
         
-
-
-
-
         msgBox = QMessageBox()
         msgBox.setText("Tu archivo ha sido analizado con exito.")
         msgBox.setStandardButtons(QMessageBox.Ok)
         msgBox.setInformativeText(":D")
         msgBox.exec_()
+
 
     def generarReporte(self):
         global herramienta
