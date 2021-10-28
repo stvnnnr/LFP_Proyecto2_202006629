@@ -297,6 +297,14 @@ class analizadorLexico:
     #         if x.tipo != tiposToken.error:
     #             print(x.getLexema(), "-->", x.getTipo(), '-->', x.getFila(), '-->', x.getColumna())
     
+
+    # def imp(self, texto):
+    #     while True:
+    #         separar = texto.split("\");\n")
+    #         separarDos = separar[1]
+    #         separarTres = separarDos.split()
+
+
     def ImprimirErrores(self):
         global tiposToken
         for x in self.listaTokens:

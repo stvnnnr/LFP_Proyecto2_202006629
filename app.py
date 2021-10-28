@@ -7,9 +7,13 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox
 import webbrowser
 import imgkit
 from analizadorLexico import *
+from analizadorLexico import *
 from html2image import Html2Image
+from analizadorSintactico import analizadorSintactico
+from Productos import Productos
 global archivo
 global herramienta
+global herramientaDos
 
 class principal(QMainWindow):
     
@@ -52,10 +56,33 @@ class principal(QMainWindow):
     def analizar(self):
         global archivo
         global herramienta
+        global herramientaDos
         herramienta = analizadorLexico()
+        herramientaDos = analizadorSintactico()
         archivo = self.areaTexto.toPlainText()
         herramienta.scanner(archivo)
-        herramienta.ImprimirErrores()
+        #herramienta.ImprimirErrores()
+
+        claves = herramientaDos.obtenerClaves(archivo)
+        imprimir = herramientaDos.obtenerImprimir(archivo)
+        imprimirln = herramientaDos.obtenerImprimirln(archivo)
+        registros = herramientaDos.obtenerRegistros(archivo)
+        comentario = herramientaDos.obtenerComentarios(archivo)
+        conteo = herramientaDos.obtenerNoRegis(archivo)
+        multiComent = herramientaDos.obtenerMultilinea(archivo)
+        listaRegistros = []
+        listaRegistros = herramientaDos.obtenerListaRegisto(archivo)
+        #--------------------------------------------------------
+        self.consola.setText(claves+"\n"+registros+"\n"+imprimir+"\n"+comentario+"\n"+conteo+"\n"+multiComent+"\n"+imprimirln)
+
+        for li in range(len(listaRegistros)):
+            print(listaRegistros[li])
+
+        
+        
+
+
+
 
         msgBox = QMessageBox()
         msgBox.setText("Tu archivo ha sido analizado con exito.")
