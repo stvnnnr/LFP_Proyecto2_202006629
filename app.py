@@ -4,11 +4,8 @@ from PyQt5 import uic
 from PyQt5 import QtGui, QtCore, QtWidgets
 from PyQt5.QtGui import QIcon, QImage, QPixmap
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox
-import webbrowser
-import imgkit
 from analizadorLexico import *
 from analizadorLexico import *
-from html2image import Html2Image
 from analizadorSintactico import analizadorSintactico
 from Productos import Productos
 global archivo
@@ -108,7 +105,6 @@ class principal(QMainWindow):
         msgBox.setStandardButtons(QMessageBox.Ok)
         msgBox.setInformativeText(":D")
         msgBox.exec_()
-
 
     def generarReporte(self):
         global herramienta

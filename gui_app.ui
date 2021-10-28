@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>890</width>
-    <height>600</height>
+    <width>977</width>
+    <height>719</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -41,18 +41,18 @@
      <rect>
       <x>0</x>
       <y>40</y>
-      <width>821</width>
+      <width>971</width>
       <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string>__________________________________________________________________________________________________________________________________________</string>
+     <string>____________________________________________________________________________________________________________________________________________________________________</string>
     </property>
    </widget>
    <widget class="QPushButton" name="botonSalir">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>770</x>
       <y>20</y>
       <width>131</width>
       <height>41</height>
@@ -67,15 +67,15 @@
      <rect>
       <x>10</x>
       <y>100</y>
-      <width>371</width>
-      <height>471</height>
+      <width>411</width>
+      <height>591</height>
      </rect>
     </property>
    </widget>
    <widget class="QPushButton" name="botonCargar">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>430</x>
       <y>20</y>
       <width>131</width>
       <height>41</height>
@@ -88,7 +88,7 @@
    <widget class="QPushButton" name="botonAnalizar">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>600</x>
       <y>20</y>
       <width>131</width>
       <height>41</height>
@@ -101,10 +101,10 @@
    <widget class="QLabel" name="consola">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>440</x>
       <y>100</y>
-      <width>361</width>
-      <height>471</height>
+      <width>401</width>
+      <height>591</height>
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -120,7 +120,7 @@
    <widget class="QComboBox" name="comboRepos">
     <property name="geometry">
      <rect>
-      <x>760</x>
+      <x>850</x>
       <y>120</y>
       <width>121</width>
       <height>31</height>
@@ -150,7 +150,7 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>760</x>
+      <x>850</x>
       <y>90</y>
       <width>121</width>
       <height>31</height>
@@ -166,7 +166,7 @@
    <widget class="QPushButton" name="botonGenerar">
     <property name="geometry">
      <rect>
-      <x>760</x>
+      <x>850</x>
       <y>160</y>
       <width>121</width>
       <height>31</height>
